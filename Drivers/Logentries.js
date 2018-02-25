@@ -12,7 +12,7 @@
 const _ = require('lodash')
 const path = require('path')
 const Winston = require('winston')
-const LogDNA = require('logdna-winston')
+const Logentries = require('le_node')
 
 /**
  * @module Adonis
@@ -27,7 +27,7 @@ const LogDNA = require('logdna-winston')
  * @class WinstonFile
  * @constructor
  */
-class WinstonLogDNA {
+class WinstonLogentries {
   /**
    * Returns an array of dependencies to be injected
    * by IoC container.
@@ -57,8 +57,6 @@ class WinstonLogDNA {
   setConfig(config) {
     this.config = Object.assign({}, {
       name: 'adonis-app',
-      filename: 'adonis.log',
-      colorize: 'all',
       level: 'info'
     }, config)
 
@@ -66,7 +64,7 @@ class WinstonLogDNA {
      * Creating new instance of winston with file transport
      */
     this.logger = new Winston.Logger({
-      transports: [new Winston.transports.LogDNA(this.config)]
+      transports: [new Winston.transports.Logentries(this.config)]
     })
 
     /**
@@ -136,4 +134,4 @@ class WinstonLogDNA {
   }
 }
 
-module.exports = WinstonFile
+module.exports = WinstonLogentries
