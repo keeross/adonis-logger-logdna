@@ -2,8 +2,6 @@
 
 This service provider adds LogDNA as a driver to Adonis Logger.
 
-It is built on top of [stripe-node](https://github.com/stripe/stripe-node) and proxies all the methods keeping them 100% original. So you can follow official Stripe documentation.
-
 <img src="http://res.cloudinary.com/adonisjs/image/upload/q_100/v1497112678/adonis-purple_pzkmzt.svg" width="200px" align="right" hspace="30px" vspace="140px">
 
 ## Setup
