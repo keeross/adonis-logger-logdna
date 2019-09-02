@@ -3,7 +3,7 @@
 Make sure to register the provider inside `start/app.js` file.
 
 ```js
-const providers = ["adonis-logger-logdna/providers/LogdnaProvider"];
+const providers = ["@bitkidd/adonis-logger-logdna/providers/LogdnaProvider"];
 ```
 
 Add new configuration inside `logger` module in `config/app.js`:

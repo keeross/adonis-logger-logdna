@@ -1,6 +1,6 @@
 {
-  "name": "adonis-logger-logdna",
-  "version": "1.0.0",
+  "name": "@bitkidd/adonis-logger-logdna",
+  "version": "1.0.1",
   "description": "LogDNA driver for Adonis Logger",
   "main": "index.js",
   "scripts": {
@@ -48,5 +48,13 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keeross/adonis-logger-logdna.git"
+  },
+  "bugs": {
+    "url": "https://github.com/keeross/adonis-logger-logdna/issues"
+  },
+  "homepage": "https://github.com/keeross/adonis-logger-logdna#readme"
 }

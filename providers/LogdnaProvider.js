@@ -1,7 +1,7 @@
 "use strict";
 
 const { ServiceProvider } = require("@adonisjs/fold");
-const LogDNA = require("../Drivers/LogDNA");
+const LogDNA = require("../drivers/LogDNA");
 
 class LogdnaProvider extends ServiceProvider {
   register() {
