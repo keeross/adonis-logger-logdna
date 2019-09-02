@@ -46,26 +46,24 @@ class WinstonLogDNA {
    * @param  {Object}  config
    */
   setConfig(config) {
-    this.config = Object.assign(
-      {},
-      {
-        app: "adonis-app",
+    this.config = {
+      ...{
         hostname: null,
         ip: null,
         mac: null,
-        app: null,
+        app: "adonis-app",
         env: null,
+        index_meta: true,
         level: "info"
       },
-      config
-    );
+      ...config
+    };
 
     /**
      * Creating new instance of winston with file transport
      */
-    this.logger = new Winston.Logger({
-      transports: [new LogDNA(this.config)]
-    });
+    this.logger = Winston.createLogger({});
+    this.logger.add(new LogDNA(this.config));
 
     /**
      * Updating winston levels with syslog standard levels.
