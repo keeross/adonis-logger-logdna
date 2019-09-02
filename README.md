@@ -1,4 +1,4 @@
-# Adonis Logger LogDNA <img src="https://stripe.com/favicon.ico" alt="LogDNA icon" width="25px" height="25px">
+# Adonis Logger LogDNA <img src="https://reps.ams3.cdn.digitaloceanspaces.com/logdna_logo.png" alt="LogDNA icon" width="25px" height="25px">
 
 This service provider adds LogDNA as a driver to Adonis Logger.
 
