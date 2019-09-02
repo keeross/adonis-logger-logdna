@@ -1,7 +1,7 @@
 {
-  "name": "adonis-logger-logentries",
+  "name": "adonis-logger-logdna",
   "version": "1.0.0",
-  "description": "Logentries driver for Adonis Logger",
+  "description": "LogDNA driver for Adonis Logger",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
@@ -15,24 +15,24 @@
   "keywords": [
     "adonisjs",
     "logger",
-    "logentries"
+    "logdna"
   ],
   "author": "keeross",
   "license": "MIT",
   "dependencies": {
-    "le_node": "^1.7.1",
-    "winston": "^2.4.0"
+    "logdna-winston": "^2.2.2",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@adonisjs/fold": "^4.0.7",
-    "@adonisjs/sink": "^1.0.16",
-    "coveralls": "^3.0.0",
-    "cz-conventional-changelog": "^2.1.0",
-    "japa": "^1.0.6",
+    "@adonisjs/fold": "^4.0.9",
+    "@adonisjs/sink": "^1.0.17",
+    "coveralls": "^3.0.6",
+    "cz-conventional-changelog": "^3.0.2",
+    "japa": "^3.0.0",
     "japa-cli": "^1.0.1",
-    "nyc": "^11.4.1",
-    "semver": "^5.5.0",
-    "standard": "^10.0.3"
+    "nyc": "^14.1.1",
+    "semver": "^6.3.0",
+    "standard": "^14.1.0"
   },
   "standard": {
     "globals": [

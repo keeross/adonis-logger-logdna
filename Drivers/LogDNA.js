@@ -1,18 +1,9 @@
-'use strict'
+"use strict";
 
-/*
- * adonis-framework
- *
- * (c) Harminder Virk <virk@adonisjs.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
-*/
-
-const _ = require('lodash')
-const path = require('path')
-const Winston = require('winston')
-const Logentries = require('le_node')
+const _ = require("lodash");
+const path = require("path");
+const Winston = require("winston");
+const LogDNA = require("logdna-winston");
 
 /**
  * @module Adonis
@@ -27,7 +18,7 @@ const Logentries = require('le_node')
  * @class WinstonFile
  * @constructor
  */
-class WinstonLogentries {
+class WinstonLogDNA {
   /**
    * Returns an array of dependencies to be injected
    * by IoC container.
@@ -38,11 +29,11 @@ class WinstonLogentries {
    * @return {Array}
    */
   static get inject() {
-    return ['Adonis/Src/Helpers']
+    return ["Adonis/Src/Helpers"];
   }
 
   constructor(Helpers) {
-    this.Helpers = Helpers
+    this.Helpers = Helpers;
   }
 
   /**
@@ -55,22 +46,31 @@ class WinstonLogentries {
    * @param  {Object}  config
    */
   setConfig(config) {
-    this.config = Object.assign({}, {
-      name: 'adonis-app',
-      level: 'info'
-    }, config)
+    this.config = Object.assign(
+      {},
+      {
+        app: "adonis-app",
+        hostname: null,
+        ip: null,
+        mac: null,
+        app: null,
+        env: null,
+        level: "info"
+      },
+      config
+    );
 
     /**
      * Creating new instance of winston with file transport
      */
     this.logger = new Winston.Logger({
-      transports: [new Winston.transports.Logentries(this.config)]
-    })
+      transports: [new LogDNA(this.config)]
+    });
 
     /**
      * Updating winston levels with syslog standard levels.
      */
-    this.logger.setLevels(this.levels)
+    this.logger.setLevels(this.levels);
   }
 
   /**
@@ -90,7 +90,7 @@ class WinstonLogentries {
       notice: 5,
       info: 6,
       debug: 7
-    }
+    };
   }
 
   /**
@@ -101,7 +101,7 @@ class WinstonLogentries {
    * @return {String}
    */
   get level() {
-    return this.logger.transports[this.config.name].level
+    return this.logger.transports[this.config.name].level;
   }
 
   /**
@@ -112,7 +112,7 @@ class WinstonLogentries {
    * @return {void}
    */
   set level(level) {
-    this.logger.transports[this.config.name].level = level
+    this.logger.transports[this.config.name].level = level;
   }
 
   /**
@@ -127,11 +127,11 @@ class WinstonLogentries {
    * @return {void}
    */
   log(level, msg, ...meta) {
-    const levelName = _.findKey(this.levels, (num) => {
-      return num === level
-    })
-    this.logger.log(levelName, msg, ...meta)
+    const levelName = _.findKey(this.levels, num => {
+      return num === level;
+    });
+    this.logger.log(levelName, msg, ...meta);
   }
 }
 
-module.exports = WinstonLogentries
+module.exports = WinstonLogDNA;

@@ -1,6 +1,6 @@
-# Adonis Stripe <img src="https://stripe.com/favicon.ico" alt="Stripe icon" width="25px" height="25px">
+# Adonis Logger LogDNA <img src="https://stripe.com/favicon.ico" alt="LogDNA icon" width="25px" height="25px">
 
-This service provider makes it easier to integrate and to work with Stripe official library.
+This service provider adds LogDNA as a driver to Adonis Logger.
 
 It is built on top of [stripe-node](https://github.com/stripe/stripe-node) and proxies all the methods keeping them 100% original. So you can follow official Stripe documentation.
 
@@ -48,7 +48,6 @@ It is always helpful if we try to follow certain practices when creating issues 
 3. For general questions, please create a forum thread.
 4. When creating a PR for a feature, make sure to create a parallel PR for docs too.
 
-
 ## Regression Tests
 
 Regression tests are tests, which shows how a piece of code fails under certain circumstance, but the beauty is even after the failure, the test suite will never fail. Actually is a nice way to notify about bugs, but making sure everything is green.
@@ -64,15 +63,10 @@ test.failing('2 + 2 is always 4, but add method returns 6', (assert) => {
 Now since the `add` method has a bug, it will return `6` instead of `4`. But the build will pass.
 
 [appveyor-image]: https://img.shields.io/appveyor/ci/thetutlage/adonis-drive/master.svg?style=flat-square
-
 [appveyor-url]: https://ci.appveyor.com/project/thetutlage/adonis-drive
-
 [npm-image]: https://img.shields.io/npm/v/@adonisjs/drive.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/@adonisjs/drive
-
 [travis-image]: https://img.shields.io/travis/adonisjs/adonis-drive/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/adonisjs/adonis-drive
-
 [coveralls-image]: https://img.shields.io/coveralls/adonisjs/adonis-drive/develop.svg?style=flat-square
-
 [coveralls-url]: https://coveralls.io/github/adonisjs/adonis-drive
