@@ -1,6 +1,6 @@
 {
   "name": "@bitkidd/adonis-logger-logdna",
-  "version": "1.0.1",
+  "version": "2.3.0",
   "description": "LogDNA driver for Adonis Logger",
   "main": "index.js",
   "scripts": {
