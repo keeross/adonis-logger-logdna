@@ -1,6 +1,7 @@
 # Adonis Logger LogDNA <img src="https://reps.ams3.cdn.digitaloceanspaces.com/logdna_logo.png" alt="LogDNA icon" width="25px" height="25px">
 
 This service provider adds LogDNA as a driver to Adonis Logger.
+Tha package will follow [logdna-winston](https://github.com/logdna/logdna-winston) version number to be in sync.
 
 <img src="http://res.cloudinary.com/adonisjs/image/upload/q_100/v1497112678/adonis-purple_pzkmzt.svg" width="200px" align="right" hspace="30px" vspace="140px">
 
